@@ -37,6 +37,8 @@ def add(uname, pword):
         result = db.users.find({'uname' : userN})
 #	result = c.execute('SELECT DISTINCT usersList.user,usersList.pass FROM usersList WHERE usersList.user = ?', (userN,))
 	for x in result:
+		print x[0]
+		print userN
 		if x[0] == userN:
 			response = "taken"
 	if response != "taken":
